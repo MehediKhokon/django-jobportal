@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Main Section -->
+<div class="container">
+  <h2 class="heading font-weight-light text-center text-success">
+    CV List
+  </h2>
+  <h4 class="heading font-weight-light text-center">
+  </h2>
+  <hr />
+</div>
+<div class="container main-part">
+ <table class="table">   
+   <thead>    
+     <tr>
+       <th>User</th>
+       <th>Name</th>
+       <th>Mobile</th>
+       <th>Email</th>
+       <th>P.Adress</th>
+       <th>Language skill</th>
+       <th>Total Mark</th>          
+     </tr>
+   </thead>
+   <tbody>
+    {% for data in object_list %}
+    
+      <tr>
+       <td> {{data.manager}} </td>
+       <td> {{data.name}} </td>
+       <td> {{data.mobile}} </td>
+       <td> {{data.email}} </td>
+       <td> {{data.present_address}} </td>
+       <td> {{data.language_skill}} </td>
+       <td> {{data.total}} </td>       
+     </tr>
+    
+    
+      
+    {% endfor %}     
+   </tbody>
+ </table>
+  
+</div>
+<!-- Main Section ends-->
+  
+{% endblock content %}
+  

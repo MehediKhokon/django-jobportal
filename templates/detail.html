@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Main Section -->
+<div class="container">
+  <h2 class="heading font-weight-light text-center text-success">{{jobposts.job_name}}
+  </h2>
+  <h4 class="heading font-weight-light text-center">{{jobposts.company_name}}
+  </h2>
+  <hr />
+</div>
+<div class="container main-part">
+  <!-- Card for details -->
+  <div class="card mx-auto mb-5" >    
+    <div class="card-header">
+      <a href="#" class="text-dark header-link text-center"> 
+      Job Summary
+      </a>
+    </div>
+    <div class="card-body pb-0">
+      <p>
+        Published on : {{jobposts.publish_date}}
+      </p>
+
+      <p>
+        Vacency: {{jobposts.vacency}}
+      </p>
+      <p>
+        Employment Status: {{jobposts.emp_status}}
+      </p>
+      <p>
+        Experience: {{jobposts.experiance_req}}
+      </p>
+      <p>
+        {{jobposts.add_req}}
+      </p>
+      <p>
+        Job Location: {{jobposts.job_location}}
+      </p>
+      <p>
+        Salary: {{jobposts.salay}}
+      </p>
+      <p>
+        Educational requirement: {{jobposts.education_req}}
+      </p>
+      <p>
+        Job Responsibilities: {{jobposts.job_responsibilities}}
+      </p>
+      <p>
+        Other Benefits: {{jobposts.other_benefit}}
+      </p>      
+    </div>
+    <div class="card-footer text-center">         
+          <a href="{% url 'create-cv' jobposts.id %}" class="btn btn-danger text-light" style="text-decoration: none;">Apply online</a>
+       
+      </div>
+  </div>  
+</div>
+<!-- Main Section ends-->
+  
+{% endblock content %}
+  

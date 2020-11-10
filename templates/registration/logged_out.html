@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+    	<h2 class="heading font-weight-light text-center">Log out</h2>
+    	<hr>
+    </div>
+    <div class="container w-25 card p-4 mt-4">
+    	<p class="font-weight-light">
+         You have been successfully logged out.
+         You can log in again <a href="{% url 'login' %}" class="text-info">Using this link</a>   
+        </p>
+    	
+    </div>
+{% endblock content %}

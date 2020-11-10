@@ -1,0 +1,25 @@
+<div class="card my-2 mx-2 boy-card" style="min-width: 700px;">    
+    <div class="card-header">
+      
+      <a href="{% url 'detail' jobpost.id %}" class="text-white header-link"> 
+        {{jobpost.job_name}}
+      </a>
+    </div>
+    <div class="card-body pb-0">
+      <a href="{% url 'detail' jobpost.id %}" style="text-decoration: none;">
+      <p>
+        {{jobpost.company_name}}
+      </p>
+      <p>
+        {{jobpost.job_location}}
+      </p>
+      <p>
+      {{jobpost.education_req}}
+      </p>
+      <p>
+        {{jobpost.experiance_req}}
+      </p>
+      </a>
+    </div>
+  </div>
+  
